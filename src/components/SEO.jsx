@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+{/*import { Helmet } from 'react-helmet-async';*/}
 
 const SEO = ({ title, description, keywords, image, url }) => {
   const siteTitle = "MyHealthTracker - Your Health Education Companion";
@@ -8,7 +8,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
   const defaultImage = `${siteUrl}/og-image.jpg`;
 
   return (
-    <Helmet>
+    <>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -30,7 +30,7 @@ const SEO = ({ title, description, keywords, image, url }) => {
       <meta name="robots" content="index, follow" />
       <meta name="author" content="MyHealthTracker" />
       <link rel="canonical" href={fullUrl} />
-    </Helmet>
+    </>
   );
 };
 
