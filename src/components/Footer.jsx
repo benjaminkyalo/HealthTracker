@@ -64,10 +64,6 @@ const Footer = () => {
                 <span className="text-gray-400">info@myhealthtracker.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-gray-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-gray-400" />
                 <span className="text-gray-400">New York, NY</span>
               </div>
@@ -77,7 +73,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 MyHealthTracker. All rights reserved. This information is for educational purposes only and should not replace professional medical advice.
+            © 2025 MyHealthTracker. All rights reserved. This information is for educational purposes
           </p>
         </div>
       </div>
