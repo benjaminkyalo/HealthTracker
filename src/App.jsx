@@ -1,7 +1,10 @@
-
-import Home from './pages/Home'
-import Footer from './components/Footer'
-import Header from './components/Header'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from './contexts/ThemeContext';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from "./pages/Home";
 import Diabetes from "./pages/Diabetes";
 import HighBloodPressure from "./pages/HighBloodPressure";
 import Depression from "./pages/Depression";
@@ -9,16 +12,16 @@ import Cancer from "./pages/Cancer";
 import Obesity from "./pages/Obesity";
 import HivAids from "./pages/HivAids";
 import NotFound from "./pages/NotFound";
-import { Routes, Route } from "react-router-dom";
 
-function App() {
+const App = () => (
   
-
-  return (
-    <>
-    <div className="min-h-screen flex flex-col w-full">
-      <Header />
-      <main className="flex-1">
+    <HelmetProvider>
+      <ThemeProvider>
+        
+          <BrowserRouter>
+            <div className="min-h-screen flex flex-col w-full">
+              <Header />
+               <main class="bg-background text-foreground">
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/diabetes" element={<Diabetes />} />
@@ -31,11 +34,13 @@ function App() {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
-      
-      <Footer />
-      </div>
-    </>
-  )
-}
+              <Footer />
+            </div>
+          </BrowserRouter>
+        
+      </ThemeProvider>
+    </HelmetProvider>
+ 
+);
 
-export default App
+export default App;

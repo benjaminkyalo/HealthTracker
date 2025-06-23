@@ -71,6 +71,7 @@ const Home = () => {
                 Your Health Journey
                 <span className="block text-blue-200">Starts Here</span>
               </h1>
+              
               <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
                 Empowering you with evidence-based health education and practical guidance for preventing and managing common diseases.
               </p>
@@ -181,3 +182,6 @@ const Home = () => {
 };
 
 export default Home;
+
+    
+ 
