@@ -68,9 +68,8 @@ const Home = () => {
 
       <div className="min-h-screen bg-slate-50 dark:bg-gray-900">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br h-screen  bg-cover bg-center bg-no-repeat text-white overflow-hidden w-full"
-        style={{ backgroundImage: "url('https://res.cloudinary.com/drq4idzdj/image/upload/v1750191909/pexels-cottonbro-7579831_zf7blw.jpg')" }} >
-          <div className="absolute inset-0 bg-black/50"></div>
+       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
