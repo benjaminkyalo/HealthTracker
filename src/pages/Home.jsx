@@ -12,42 +12,48 @@ const Home = () => {
       path: '/diabetes',
       icon: Activity,
       description: 'Learn about managing blood sugar levels, recognizing symptoms, and preventing complications of diabetes.',
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
+      linkDescription: 'Explore comprehensive resources on diabetes management, including diet, exercise, and medication.'
     },
     {
       name: 'High Blood Pressure',
       path: '/high-blood-pressure',
       icon: Heart,
       description: 'Understand hypertension causes, monitoring techniques, and lifestyle changes for better heart health.',
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-blue-500 to-indigo-500',
+      linkDescription: 'Discover effective strategies to manage high blood pressure, including dietary tips and exercise routines.'
     },
     {
       name: 'Depression',
       path: '/depression',
       icon: Brain,
       description: 'Recognize mental health signs, treatment options, and support strategies for emotional well-being.',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
+      linkDescription: 'Find resources for understanding depression, including therapy options, coping mechanisms, and support networks.'
     },
     {
       name: 'Cancer',
       path: '/cancer',
       icon: Ribbon,
       description: 'Discover prevention methods, early detection signs, and comprehensive treatment information.',
-      color: 'from-green-500 to-teal-500'
+      color: 'from-green-500 to-teal-500',
+      linkDescription: 'Explore resources on cancer prevention, screening, and support for patients and families.'
     },
     {
       name: 'Obesity',
       path: '/obesity',
       icon: Scale,
       description: 'Explore healthy weight management, nutrition guidelines, and sustainable lifestyle changes.',
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
+      linkDescription: 'Learn about obesity management, including diet plans, exercise tips, and behavioral strategies.'
     },
     {
       name: 'HIV/AIDS',
       path: '/hiv-aids',
       icon: Shield,
       description: 'Access vital information about prevention, testing, treatment, and living with HIV/AIDS.',
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-yellow-500 to-orange-500',
+      linkDescription: 'Find comprehensive resources on HIV/AIDS prevention, testing, and treatment options.'
     }
   ];
 
@@ -145,8 +151,10 @@ const Home = () => {
                         to={disease.path}
                         className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors group"
                       >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        <button onClick={(disease.linkDescription)} className="text-sm font-medium flex items-center group-hover:underline ">
+                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </button>
                       </Link>
                     </div>
                   </div>
