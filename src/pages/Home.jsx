@@ -150,10 +150,9 @@ const Home = () => {
                         to={disease.path}
                         className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors group"
                       >
-                        <button onClick={(disease.linkDescription)} className="text-sm font-medium flex items-center group-hover:underline ">
-                          Learn More
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        Learn More&nbsp;
+                        <span className="sr-only">{disease.linkDescription}</span>
+                        <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </div>
                   </div>

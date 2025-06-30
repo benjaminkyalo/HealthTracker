@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from "./pages/Home";
@@ -16,12 +15,11 @@ import NotFound from "./pages/NotFound";
 const App = () => (
   
     <HelmetProvider>
-      <ThemeProvider>
-        
+      
           <BrowserRouter>
             <div className="min-h-screen flex flex-col w-full">
               <Header />
-               <main class="bg-background text-foreground">
+               <main className="bg-background text-foreground">
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/diabetes" element={<Diabetes />} />
@@ -38,7 +36,7 @@ const App = () => (
             </div>
           </BrowserRouter>
         
-      </ThemeProvider>
+      
     </HelmetProvider>
  
 );

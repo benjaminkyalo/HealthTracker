@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon, Heart } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+ 
   const location = useLocation();
 
   const diseases = [
@@ -54,18 +54,7 @@ const Header = () => {
 
           {/* Theme Toggle & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'light' ? (
-                <Moon className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-              ) : (
-                <Sun className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-              )}
-            </button>
-
+          
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
