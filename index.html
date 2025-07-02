@@ -102,11 +102,13 @@
     <!-- AdSense - Defer loading -->
     <script>
       function loadAdSense() {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9889786419688558';
-        script.crossOrigin = 'anonymous';
-        document.head.appendChild(script);
+        if (!document.querySelector('script[src^="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9889786419688558';
+          script.crossOrigin = 'anonymous';
+          document.head.appendChild(script);
+        }
       }
       
       // Load AdSense after page load
