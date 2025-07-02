@@ -2,24 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5QCW674C');</script>
-    <!-- End Google Tag Manager -->
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9889786419688558"
-     crossorigin="anonymous"></script>
-
-    <meta name="google-adsense-account" content="ca-pub-9889786419688558">
     
+    <!-- DNS Prefetch and Preconnect for faster loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Viewport and SEO -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyHealthTracker - Your Health Education Companion</title>
     <meta name="description" content="Comprehensive health education platform covering diabetes, hypertension, depression, cancer, obesity, and HIV/AIDS. Learn prevention, symptoms, and treatment options.">
     <meta name="author" content="MyHealthTracker">
 
+    <!-- Favicons with explicit dimensions -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -27,11 +25,60 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Optimized Google Fonts Loading - Non-blocking with fallback -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
+    
+    <!-- Fallback font loading script -->
+    <script>
+      if (!window.FontFace) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+        document.head.appendChild(link);
+      }
+    </script>
 
+    <!-- Inline critical CSS to prevent render blocking -->
+    <style>
+      /* Critical CSS - Add your above-the-fold styles here */
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading spinner to prevent layout shift */
+      .loading-spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+      
+      /* Hide spinner when React loads */
+      .react-loaded .loading-spinner {
+        display: none;
+      }
+    </style>
+
+    <!-- Open Graph and Twitter -->
     <meta property="og:title" content="MyHealthTracker - Your Health Education Companion">
     <meta property="og:description" content="Comprehensive health education platform covering diabetes, hypertension, depression, cancer, obesity, and HIV/AIDS. Learn prevention, symptoms, and treatment options.">
     <meta property="og:type" content="website">
@@ -41,16 +88,55 @@
     <meta name="twitter:site" content="@myhealthtracker">
     <meta name="twitter:image" content="https://healthawarehub.com/og-image.jpg">
 
-    <!-- Google Analytics tracking is handled via Google Tag Manager. 
-         Removed separate gtag.js snippet to prevent duplicate tracking. -->
+    <meta name="google-adsense-account" content="ca-pub-9889786419688558">
+
+    <!-- Google Tag Manager - Moved to end of head for better performance -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5QCW674C');
+    </script>
+
+    <!-- AdSense - Defer loading -->
+    <script>
+      function loadAdSense() {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9889786419688558';
+        script.crossOrigin = 'anonymous';
+        document.head.appendChild(script);
+      }
+      
+      // Load AdSense after page load
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadAdSense);
+      } else {
+        loadAdSense();
+      }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QCW674C"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     
-    <div id="root"></div>
+    <div id="root">
+      <!-- Loading spinner to prevent layout shift -->
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <!-- Main script with module preload -->
+    <link rel="modulepreload" href="/src/main.jsx">
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Script to remove loading spinner when React loads -->
+    <script>
+      // Remove loading spinner when React app loads
+      window.addEventListener('load', function() {
+        document.body.classList.add('react-loaded');
+      });
+    </script>
   </body>
 </html>
