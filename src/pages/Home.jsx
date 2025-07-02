@@ -11,49 +11,49 @@ const Home = () => {
       name: 'Diabetes',
       path: '/diabetes',
       icon: Activity,
-      description: 'Learn about managing blood sugar levels, recognizing symptoms, and preventing complications of diabetes.',
+      description: 'What is diabetes? Causes of diabetes, symptoms of diabetes, types of diabetes, treatment of diabetes, diabetes diet, prevention of diabetes.',
       color: 'from-red-500 to-pink-500',
-      linkDescription: 'Explore comprehensive resources on diabetes management, including diet, exercise, and medication.'
+      linkDescription: 'What is diabetes, causes of diabetes, symptoms of diabetes, types of diabetes, treatment of diabetes, diabetes diet, prevention of diabetes.'
     },
     {
       name: 'High Blood Pressure',
       path: '/high-blood-pressure',
       icon: Heart,
-      description: 'Understand hypertension causes, monitoring techniques, and lifestyle changes for better heart health.',
+      description: 'What is high blood pressure? Causes of high blood pressure, symptoms of high blood pressure, types of hypertension, treatment of high blood pressure, hypertension diet, prevention of high blood pressure.',
       color: 'from-blue-500 to-indigo-500',
-      linkDescription: 'Discover effective strategies to manage high blood pressure, including dietary tips and exercise routines.'
+      linkDescription: 'What is high blood pressure, causes of high blood pressure, symptoms of high blood pressure, types of hypertension, treatment of high blood pressure, hypertension diet, prevention of high blood pressure.'
     },
     {
       name: 'Depression',
       path: '/depression',
       icon: Brain,
-      description: 'Recognize mental health signs, treatment options, and support strategies for emotional well-being.',
+      description: 'What is depression? Causes of depression, symptoms of depression, types of depression, treatment of depression, depression diet, prevention of depression.',
       color: 'from-purple-500 to-pink-500',
-      linkDescription: 'Find resources for understanding depression, including therapy options, coping mechanisms, and support networks.'
+      linkDescription: 'What is depression, causes of depression, symptoms of depression, types of depression, treatment of depression, depression diet, prevention of depression.'
     },
     {
       name: 'Cancer',
       path: '/cancer',
       icon: Ribbon,
-      description: 'Discover prevention methods, early detection signs, and comprehensive treatment information.',
+      description: 'What is cancer? Causes of cancer, symptoms of cancer, types of cancer, treatment of cancer, cancer diet, prevention of cancer.',
       color: 'from-green-500 to-teal-500',
-      linkDescription: 'Explore resources on cancer prevention, screening, and support for patients and families.'
+      linkDescription: 'What is cancer, causes of cancer, symptoms of cancer, types of cancer, treatment of cancer, cancer diet, prevention of cancer.'
     },
     {
       name: 'Obesity',
       path: '/obesity',
       icon: Scale,
-      description: 'Explore healthy weight management, nutrition guidelines, and sustainable lifestyle changes.',
+      description: 'What is obesity? Causes of obesity, symptoms of obesity, types of obesity, treatment of obesity, obesity diet, prevention of obesity.',
       color: 'from-orange-500 to-red-500',
-      linkDescription: 'Learn about obesity management, including diet plans, exercise tips, and behavioral strategies.'
+      linkDescription: 'What is obesity, causes of obesity, symptoms of obesity, types of obesity, treatment of obesity, obesity diet, prevention of obesity.'
     },
     {
       name: 'HIV/AIDS',
       path: '/hiv-aids',
       icon: Shield,
-      description: 'Access vital information about prevention, testing, treatment, and living with HIV/AIDS.',
+      description: 'What is HIV/AIDS? Causes of HIV/AIDS, symptoms of HIV/AIDS, types of HIV/AIDS, treatment of HIV/AIDS, HIV/AIDS diet, prevention of HIV/AIDS.',
       color: 'from-yellow-500 to-orange-500',
-      linkDescription: 'Find comprehensive resources on HIV/AIDS prevention, testing, and treatment options.'
+      linkDescription: 'What is HIV/AIDS, causes of HIV/AIDS, symptoms of HIV/AIDS, types of HIV/AIDS, treatment of HIV/AIDS, HIV/AIDS diet, prevention of HIV/AIDS.'
     }
   ];
 
