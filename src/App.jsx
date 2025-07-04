@@ -11,6 +11,11 @@ import Cancer from "./pages/Cancer";
 import Obesity from "./pages/Obesity";
 import HivAids from "./pages/HivAids";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
+import Privacy from "./pages/Privacy";
+import Terms from './pages/Terms';
+import Disclaimer from './pages/Disclaimer';
+import Contact from './pages/Contact';
 
 const App = () => (
   
@@ -28,6 +33,13 @@ const App = () => (
                   <Route path="/cancer" element={<Cancer />} />
                   <Route path="/obesity" element={<Obesity />} />
                   <Route path="/hiv-aids" element={<HivAids />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  <Route path="/disclaimer" element={<Disclaimer />} />
+                  <Route path="/contact" element={<Contact />} />
+
+
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
